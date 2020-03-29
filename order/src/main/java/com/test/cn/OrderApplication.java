@@ -1,4 +1,4 @@
-package com.order.cn;
+package com.test.cn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -5,10 +5,7 @@ import com.test.cn.entity.Payment;
 import com.test.cn.service.PaymentService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PaymentController {
@@ -17,7 +14,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
-    public CommentResult create(Payment payment){
+    public CommentResult create( Payment payment){
         int i = paymentService.create(payment);
         if(i>0){
             return new CommentResult(200,"success");

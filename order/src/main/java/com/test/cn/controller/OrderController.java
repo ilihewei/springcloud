@@ -1,15 +1,13 @@
-package com.order.cn.controller;
+package com.test.cn.controller;
 
-import com.order.cn.entity.CommentResult;
-import com.order.cn.entity.Payment;
+import com.test.cn.entity.CommentResult;
+import com.test.cn.entity.Payment;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
 import javax.annotation.Resource;
 
 @RestController
@@ -22,11 +20,11 @@ public class OrderController {
     private RestTemplate restTemplate;
 
     @GetMapping(value = "order/get/{id}")
-    public CommentResult<Payment>  get(@PathVariable("id") Integer id){
-       return restTemplate.getForObject(url+"/payment/get/"+id,CommentResult.class);
+    public CommentResult<Payment> get(@PathVariable("id") Integer id){
+       return restTemplate.getForObject(url+"/payment/get/"+id, CommentResult.class);
     }
     @PostMapping(value = "order/create")
     public CommentResult<Payment> create(Payment payment){
-        return  restTemplate.patchForObject(url+"/payment/create",payment,CommentResult.class);
+        return  restTemplate.patchForObject(url+"/payment/create",payment, CommentResult.class);
     }
 }

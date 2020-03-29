@@ -12,6 +12,7 @@
     <artifactId>order</artifactId>
 
     <dependencies>
+
         <!--spring boot 2.2.2-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
