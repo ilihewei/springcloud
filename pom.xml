@@ -11,8 +11,6 @@
     <modules>
         <module>cloud-provider-payment</module>
         <module>order</module>
-        <module>cloud-api-common</module>
-        <module>cloudeurka7001</module>
     </modules>
 
 
